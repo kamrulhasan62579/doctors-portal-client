@@ -1,0 +1,8 @@
+.spacing{
+    height: 100px;
+}
+@media only screen and (max-width: 1400px) {
+ .media-spaceing {
+   height:440px;
+  }
+}

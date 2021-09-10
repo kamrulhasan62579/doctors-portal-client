@@ -1,0 +1,90 @@
+.a{
+    text-decoration: none;
+    color: white;
+}
+.footer-link li{
+    list-style: none;
+}
+.footer-link .a:hover{
+    color: red;
+}
+.footer-link{
+    background-color: #2B3346;
+}
+/* font awsome styling */
+.font-icon:hover{
+  color: rgb(7, 169, 251);
+}
+.font-icon1:hover{
+  color: rgb(250, 94, 50);
+}
+.font-icon2:hover{
+  color: rgb(231, 99, 17);
+}
+/* on hover backword */
+.link {
+  margin: 10px;
+  text-decoration: none;
+}
+
+/*===================*/
+/* BACKWARD 
+/*===================*/
+
+.backward-on-hover {
+  /* display: inline-block; */
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.backward-on-hover:hover,
+.backward-on-hover:focus,
+.backward-on-hover:active {
+   -webkit-transform: translateX(-20px);
+   transform: translateX(-20px);
+}
+
+/* Responsive media query */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+   .footer-link{
+     height: 150vh;
+   }
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+     .footer-link{
+     height: 150vh;
+   }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+     .footer-link {
+     height: 100vh;
+   }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+     .footer-link{
+     height: 100vh;
+   }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+     .footer-link{
+     height: 70vh;
+   }
+ }
+
+
+
+

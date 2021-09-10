@@ -1,0 +1,21 @@
+.header-body {
+    height:800px;
+    position:relative;
+    background : url('../../../images/chairBg.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    
+}
+.header-body::after{
+    height: 800px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 34%;
+    z-index: -50;
+}
+.header-body::after {
+    right: 0;
+    background-color: #3A4256;
+}
