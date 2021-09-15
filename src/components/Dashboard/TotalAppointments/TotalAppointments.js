@@ -1,12 +1,12 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import React from "react";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 
 const useStyles = makeStyles({
   table: {
@@ -14,34 +14,33 @@ const useStyles = makeStyles({
   },
 });
 
-
-export default function TotalAppointments({appointments}) {
+export default function TotalAppointments({ appointments }) {
   const classes = useStyles();
 
-  const handleClik = (data) => {
-    fetch('http://localhost:3010/prescriptions', {
-      method: 'POST',
+  const handleClik = data => {
+    fetch("https://pacific-savannah-02402.herokuapp.com/prescriptions", {
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'content-type':'application/json'
-      }
+        "content-type": "application/json",
+      },
     })
-    .then(res => res.json())
-    .then(success => {
-      console.log('Data Added Successfully');
-    })
+      .then(res => res.json())
+      .then(success => {
+        console.log("Data Added Successfully");
+      });
 
     // deleting clicked data from the appoint collection
-    fetch(`http://localhost:3010/delete/${data._id}`, {
-    method: 'DELETE'
+    fetch(`https://pacific-savannah-02402.herokuapp.com/delete/${data._id}`, {
+      method: "DELETE",
     })
-    .then(res => res.json())
-    .then(success => {
-      if(success){
-        document.getElementById(`${data._id}`).style.display = 'none';
-      }
-    })
-  }
+      .then(res => res.json())
+      .then(success => {
+        if (success) {
+          document.getElementById(`${data._id}`).style.display = "none";
+        }
+      });
+  };
 
   return (
     <TableContainer component={Paper}>
@@ -64,9 +63,19 @@ export default function TotalAppointments({appointments}) {
               </TableCell>
               <TableCell align="right">{row.patientName}</TableCell>
               <TableCell align="right">{row.email}</TableCell>
-              <TableCell align="right">{new Date(row.dateState).toDateString()}</TableCell>
+              <TableCell align="right">
+                {new Date(row.dateState).toDateString()}
+              </TableCell>
               <TableCell align="right">{row.cardData.subject}</TableCell>
-              <TableCell align="right"> <button onClick={() => handleClik( row)} className="btn btn-info">Pending</button> </TableCell>
+              <TableCell align="right">
+                {" "}
+                <button
+                  onClick={() => handleClik(row)}
+                  className="btn btn-info"
+                >
+                  Pending
+                </button>{" "}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

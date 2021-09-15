@@ -5,10 +5,10 @@ import SideBar from "../SideBar/SideBar";
 const Prescriptions = () => {
   const [prescriptions, setPrescriptions] = useState([]);
   useEffect(() => {
-      fetch('http://localhost:3010/prescriptions')
+    fetch("https://pacific-savannah-02402.herokuapp.com/prescriptions")
       .then(res => res.json())
-      .then(data => setPrescriptions(data))
-  }, [])
+      .then(data => setPrescriptions(data));
+  }, []);
   return (
     <div className="row w-100">
       <div className="col-md-3">
@@ -16,7 +16,7 @@ const Prescriptions = () => {
       </div>
       <div className="col-md-9">
         <h5>Prescriptions</h5>
-       <PrescriptionData prescriptions={prescriptions}></PrescriptionData>
+        <PrescriptionData prescriptions={prescriptions} />
       </div>
     </div>
   );
