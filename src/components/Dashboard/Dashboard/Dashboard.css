@@ -1,0 +1,22 @@
+.pendingAppointments{
+    background: -webkit-linear-gradient(#d76d77, #c8ffa8);
+}
+.todaysAppointments{
+    background: -webkit-linear-gradient(#40e0d0, #FF8C00, #ff0080);
+}
+.totalAppointments{
+    background: -webkit-linear-gradient(#ee27f9, #fbe56a);
+}
+.totalPatients{
+    background: -webkit-linear-gradient(#fffbd5, #b20a2c, #ff0080);
+}
+.totalPatients, .totalAppointments, .todaysAppointments, .pendingAppointments{
+    border-radius: 9px;
+    padding: 24px;
+    color: white;
+    text-align: center;
+}
+.num{
+    font-size: 40px;
+    font-weight: 700;
+}

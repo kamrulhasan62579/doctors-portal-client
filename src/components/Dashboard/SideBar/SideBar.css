@@ -1,0 +1,21 @@
+.sidebar{
+    background: -webkit-linear-gradient(#18D2AF, #0FCFEB);
+    background-repeat: no-repeat;
+    height: 99.99vh;
+}
+.sidebar li{
+    list-style: none;
+    font-size: 20px;
+    color: aliceblue;
+    padding: 18px;
+    font-weight: 600;
+}
+.sidebar-li .sidebar-link{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.sidebar-li .sidebar-link:hover{
+    color: red;
+}

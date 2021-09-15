@@ -1,7 +1,7 @@
 .bac{
     background-color: #3D4457;
     opacity: 0.9;
-    background: url("../../../images/Mask Group 4.png");
+    background: -webkit-linear-gradient(#ff4b1f, #1fddff);
     background-position: center;
     background-repeat: no-repeat;
 }

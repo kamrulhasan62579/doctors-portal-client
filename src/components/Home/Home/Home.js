@@ -8,7 +8,7 @@ import Appointment from '../Appointment/Appointment';
 import Testimonal from '../Testimonal/Testimonal';
 import Doctor from '../Doctor/Doctor';
 import Contact from '../Contact/Contact';
-import Footer from '../Footer/Footer';
+import Footer from '../../Shared/Footer/Footer';
 
 const Home = () => {
     return (

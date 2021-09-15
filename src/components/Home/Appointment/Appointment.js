@@ -1,8 +1,13 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import doctor from '../../../images/5790-removebg.png'
 import './Appointment.css'
 
 const Appointment = () => {
+    const history = useHistory();
+    const handlePush = () =>{
+        history.push("/makeAppointment")
+    }
     return (
             <div className="bac">
                 <div className="row w-100 text-light align-items-center h-75">
@@ -13,7 +18,7 @@ const Appointment = () => {
                     <h5 style={{color: "#12D0DA"}}>APPOINTMENT</h5>
                     <h1 >Make An Appointment <br/> Today</h1>
                     <p className="fs-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus veniam recusandae, facere tempora doloribus odio.</p>
-                    <div className="btn btn-success">Learn more...</div>
+                    <div onClick={handlePush}  className="btn btn-success">Learn more...</div>
                 </div>
           </div>
             </div>
