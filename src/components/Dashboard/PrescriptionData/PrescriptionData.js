@@ -34,7 +34,7 @@ export default function PrescriptionData({prescriptions}) {
         <TableBody>
           {prescriptions.map((row, index) => (
             <TableRow key={row._id}>
-             <TableCell align="right">{index + 1}</TableCell>
+             <TableCell >{index + 1}</TableCell>
               <TableCell component="th" scope="row">
                 {row.patientName}
               </TableCell>

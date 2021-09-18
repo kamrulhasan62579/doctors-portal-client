@@ -3,19 +3,17 @@ import Home from './components/Home/Home/Home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import MakeAppointment from './components/MakeAppointment/MakeAppointment/MakeAppointment';
-import BookingModal from './components/MakeAppointment/BookingModal/BookingModal';
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import Login from './components/Login/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Prescriptions from './components/Dashboard/Prescriptions/Prescriptions';
-// import Patients from './components/Dashboard/Patients/Patients';
 import Appointments from './components/Dashboard/Appointments/Appointments';
-import Settings from './components/Dashboard/Settings/Settings';
 import AllPatients from './components/Dashboard/AllPatients/AllPatients';
+import AddDoctor from './components/Dashboard/AddDoctor/AddDoctor';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
@@ -42,12 +40,15 @@ function App() {
              <Route path="/prescriptions">
                <Prescriptions></Prescriptions>
             </Route>
-             <Route path="/appointments">
+             <PrivateRoute path="/appointments">
                <Appointments></Appointments>
+            </PrivateRoute>
+             <Route path="/addDoctor">
+               <AddDoctor></AddDoctor>
             </Route>
-             <Route path="/setting">
+             {/* <Route path="/setting">
                <Settings></Settings>
-            </Route>
+            </Route> */}
           </Switch>
         </Router>
      </UserContext.Provider>

@@ -25,11 +25,11 @@ const AllPatients = () => {
   newAppointment.allPatientsLenght = newData.length;
   // }
   return (
-    <div className="row w-100">
+    <div className="row w-100 m-0">
       <div className="col-md-3">
         <SideBar />
       </div>
-      <div className="col-md-9">
+      <div className="col-md-9 mt-5">
         <h5>Prescriptions</h5>
         <PrescriptionData prescriptions={newData} />
       </div>

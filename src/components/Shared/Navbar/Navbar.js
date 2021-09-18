@@ -22,7 +22,7 @@ const Navbar = () => {
                 <Link className="nav-link me-5 " to="/dentalServices">Dental Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link me-5 " to="/dashboard">Dashboard</Link>
+                <Link className="nav-link me-5 " to="/appointments">Appointments</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link me-5 " to="/login">Login</Link>
