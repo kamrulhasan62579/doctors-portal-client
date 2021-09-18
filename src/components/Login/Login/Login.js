@@ -93,7 +93,7 @@ const Login = () => {
      }
     return (
         <div style={{height: "100vh"}} className="  d-flex justify-content-center align-items-center">
-            <div style={{boxShadow: " rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"}} className="ps-5 pe-5 col-md-4  p-3 mb-5 bg-light rounded">
+            <div style={{boxShadow: " rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"}} className="ps-5 pe-5  col-7 col-sm-7 col-md-6 col-lg-6 col-xl-5 col-xxl-5 p-3 mb-5 bg-light rounded">
             {
                 newUser ? <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="newUserForm">
@@ -119,8 +119,6 @@ const Login = () => {
                     <br/> {errors.password && errors.password.type === "required" && <span className="error">Password is required</span>}
                     {errors.password && errors.password.type === "pattern" && <span className="error">Password must have min 1 uppercase letter,  <br/> min 1 lowercase letter, min 1 <br/> special character, min 1 number, min <br/> 8 characters, max 30 characters.</span> }
                     
-                    
-                   <br/>
 
                     <input className="btn btn-success form-control" value="Sign Up" type="submit" />
                 </div>

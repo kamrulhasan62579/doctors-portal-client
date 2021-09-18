@@ -17,5 +17,11 @@
 }
 .header-body::after {
     right: 0;
-    background-color: #3A4256;
 }
+
+/* bacground-color:: after media query */
+@media (min-width: 600px) { 
+    .header-body::after{
+         background-color: #3A4256;
+    }
+ }
