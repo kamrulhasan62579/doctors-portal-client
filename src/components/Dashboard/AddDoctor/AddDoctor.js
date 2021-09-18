@@ -20,7 +20,7 @@ export default function AddDoctor() {
 
     const onSubmit = data => {
     // console.log(data);
-    const newData = {data, image: img}
+    const newData = {...data, image: img}
     fetch("http://localhost:3010/doctors", {
       method: 'POST',
       headers: {
@@ -32,6 +32,7 @@ export default function AddDoctor() {
     .then(success => {
       console.log(success)
       console.log('Doctors Addeded Successfully')
+      alert('Doctor Added Successfull')
     })
   };
 
@@ -52,6 +53,14 @@ export default function AddDoctor() {
             {...register("doctorName", { required: true })}
           />
           {errors.doctorName && <span>Doctor Name is required</span>}
+
+          <br />
+         <input
+           placeholder="Email"
+            className="form-control"
+            {...register("email", { required: true })}
+          />
+          {errors.email && <span>Doctor Name is required</span>}
 
           <br />
           <input
