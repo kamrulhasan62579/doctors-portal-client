@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Calendar from "react-calendar";
+import Spinner from "react-spinner-material";
 import { UserContext } from "../../../App";
 import AppointmentByDate from "../ApponitmentByDate/AppointmentByDate";
 import SideBar from "../SideBar/SideBar";
@@ -48,9 +49,17 @@ const Appointments = () => {
               ) : (
                 <h5>Please select a date to see your appointment</h5>
               )}
-              <h1>
-                <AppointmentByDate appointments={byDate}/>
-              </h1>
+              {
+                byDate.length === 0?
+                  <div className="col-md-9 mt-5 d-flex align-items-center justify-content-center">
+                    <h4>No Appointment Available</h4>
+                  </div>
+                  :
+                   <div>
+                    <AppointmentByDate appointments={byDate}/>
+                  </div>
+              }
+             
             </div>
          </div>
       </div>

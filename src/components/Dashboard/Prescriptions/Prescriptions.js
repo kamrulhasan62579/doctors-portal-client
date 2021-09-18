@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Spinner from "react-spinner-material";
 import PrescriptionData from "../PrescriptionData/PrescriptionData";
 import SideBar from "../SideBar/SideBar";
 
@@ -14,10 +15,18 @@ const Prescriptions = () => {
       <div className="col-md-3">
         <SideBar />
       </div>
-      <div className="col-md-9">
+      {
+        prescriptions.length === 0 ?
+        <div className="col-md-9 mt-5 d-flex align-items-center justify-content-center">
+        <Spinner size={120} spinnerColor={"#333"} spinnerWidth={2} visible={true} />
+      </div>
+      :
+       <div className="col-md-9">
         <h5 className="mt-5">Prescriptions</h5>
         <PrescriptionData prescriptions={prescriptions} />
       </div>
+      }
+     
     </div>
   );
 };

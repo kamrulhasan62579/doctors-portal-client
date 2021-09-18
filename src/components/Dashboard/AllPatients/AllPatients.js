@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../App";
 import PrescriptionData from "../PrescriptionData/PrescriptionData";
 import SideBar from "../SideBar/SideBar";
+import Spinner from 'react-spinner-material';
+
 
 const AllPatients = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -29,10 +31,17 @@ const AllPatients = () => {
       <div className="col-md-3">
         <SideBar />
       </div>
+      {
+        newData.length === 0 ?
+      <div className="col-md-9 mt-5 d-flex align-items-center justify-content-center">
+        <Spinner size={120} spinnerColor={"#333"} spinnerWidth={2} visible={true} />
+      </div>
+      :
       <div className="col-md-9 mt-5">
         <h5>Prescriptions</h5>
         <PrescriptionData prescriptions={newData} />
       </div>
+      }
     </div>
   );
 };

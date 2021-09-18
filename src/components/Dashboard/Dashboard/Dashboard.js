@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Spinner from "react-spinner-material";
 import { UserContext } from "../../../App";
 import SideBar from "../SideBar/SideBar";
 import TotalAppointments from "../TotalAppointments/TotalAppointments";
@@ -42,9 +43,15 @@ const Dashboard = () => {
 
         <div>
           <h5>Recent Appointments</h5>
-          {appointments.length && (
+          {
+            appointments.length === 0 ?
+                <div className="mt-5 d-flex align-items-center justify-content-center">
+                <Spinner size={120} spinnerColor={"#333"} spinnerWidth={2} visible={true} />
+          </div>
+          :
             <TotalAppointments appointments={appointments} />
-          )}
+          }
+          
         </div>
       </div>
     </div>

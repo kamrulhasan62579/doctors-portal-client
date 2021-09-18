@@ -6,6 +6,8 @@ import TestimonalData from "../TestimonalData/TestimonalData";
 import "./Testimonal.css";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spinner from 'react-spinner-material';
+
 
 const testimonalData = [
   {
@@ -35,7 +37,7 @@ const Testimonal = () => {
         <div className="pe-3">
           <h5 style={{ color: "#12D0DA" }}>TESTIMONAL</h5>
           <h1>
-            What's Our <br /> Patients  Says
+            What's Our <br/> Patients  Says
           </h1>
         </div>
         <div
@@ -45,7 +47,8 @@ const Testimonal = () => {
           <FontAwesomeIcon icon={faQuoteLeft} />
         </div>
       </div>
-      <div className="row w-100 justify-content-center container-fluid">
+      <div className="row w-100 d-flex justify-content-center">
+        
         {testimonalData.map(pd => <TestimonalData data={pd} />)}
       </div>
     </div>

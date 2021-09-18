@@ -14,6 +14,7 @@ import Appointments from './components/Dashboard/Appointments/Appointments';
 import AllPatients from './components/Dashboard/AllPatients/AllPatients';
 import AddDoctor from './components/Dashboard/AddDoctor/AddDoctor';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import NotFound from './components/Notfound/NotFound';
 export const UserContext = createContext();
 
 function App() {
@@ -46,9 +47,9 @@ function App() {
              <Route path="/addDoctor">
                <AddDoctor></AddDoctor>
             </Route>
-             {/* <Route path="/setting">
-               <Settings></Settings>
-            </Route> */}
+             <Route path="*">
+               <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
      </UserContext.Provider>

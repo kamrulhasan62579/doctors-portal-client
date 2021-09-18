@@ -108,7 +108,6 @@ const Login = () => {
                     <br/>{errors.email && errors.email.type === "required" && <span className="error">Email is required</span>}
                     {errors.email && errors.email.type === "pattern" && <span className="error">You should insert email like this format /\S+@\S+\.\S+/ pattern</span> }
                     
-                    <br/> 
 
                     <input className="input form-control" type="tel" placeholder="Mobile number" {...register("number", {required: true, minLength: 6, maxLength: 12})} />   
                     <br/> {errors.number && errors.number.type === "required" && <span className="error">Mobile number is required</span>}
@@ -120,13 +119,6 @@ const Login = () => {
                     <br/> {errors.password && errors.password.type === "required" && <span className="error">Password is required</span>}
                     {errors.password && errors.password.type === "pattern" && <span className="error">Password must have min 1 uppercase letter,  <br/> min 1 lowercase letter, min 1 <br/> special character, min 1 number, min <br/> 8 characters, max 30 characters.</span> }
                     
-                   
-
-                        <div className="radioInput form-control">
-                        <span>Are you a developer?</span>  <br/>
-                            <label htmlFor="Developer">1. Yes</label> <input  {...register("Developer", { required: true })} type="radio" value="Yes" /> <br/>
-                            <label htmlFor="Developer">2. No</label> <input {...register("Developer", { required: true })} type="radio" value="No" /> 
-                        </div>
                     
                    <br/>
 
@@ -155,9 +147,10 @@ const Login = () => {
             <p>Are you a new user? <span style={{color: 'blue'}} onClick={() => setNewUser(!newUser)}>Sign Up</span></p>
             }
             <div className="d-flex justify-content-center">
-                    <GoogleButton onClick={handleGoogleSignIn}/>
-            </div>
+               <GoogleButton onClick={handleGoogleSignIn}/>
+            </div> 
         </div>
+                    
         </div>
     );
 };
