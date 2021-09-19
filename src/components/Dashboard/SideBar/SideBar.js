@@ -13,12 +13,14 @@ const SideBar = () => {
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
-    const decodedToken = jwt_decode(token);
-    const userEmail = decodedToken.email;
+      if (token) {
+          const decodedToken = jwt_decode(token);
+          const userEmail = decodedToken.email;
 
-     fetch(`https://pacific-savannah-02402.herokuapp.com/isdoctor/3?email=${userEmail}`)
-     .then(res => res.json())
-     .then(data=> setIsDoctor(data))
+          fetch(`https://pacific-savannah-02402.herokuapp.com/isdoctor/3?email=${userEmail}`)
+          .then(res => res.json())
+          .then(data=> setIsDoctor(data))
+      }
 
   }, [])
 

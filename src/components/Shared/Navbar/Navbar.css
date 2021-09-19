@@ -1,0 +1,11 @@
+
+@media (max-width: 991.99px) { 
+    .special-login{
+      width: 25%;
+    }
+ }
+@media (min-width: 992px) { 
+    .special-login{
+      width: 100%;
+    }
+ }

@@ -77,25 +77,16 @@ const Login = () => {
      const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
         .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            console.log(token);
-
-            // if(sessionStorage.getItem("token")){
-            //      sessionStorage.clear();
-            //      sessionStorage.setItem('token', token)
-            // }
-            // else{
-            //     sessionStorage.setItem('token', token)
-            // }
-
+            const token = result.user.accessToken;
+            sessionStorage.setItem('token', token)
             const user = result.user;
             const newData = {...loggedInUser};
             newData.displayName = user.displayName;
             newData.email = user.email;
             setLoggedInUser(newData);
              history.replace(from);
-        }).catch((error) => {
+        })
+        .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             const email = error.email;

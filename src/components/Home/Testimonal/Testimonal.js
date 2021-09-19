@@ -49,7 +49,7 @@ const Testimonal = () => {
       </div>
       <div className="row w-100 d-flex justify-content-center">
         
-        {testimonalData.map(pd => <TestimonalData data={pd} />)}
+        {testimonalData.map(pd => <TestimonalData key={pd.id} data={pd} />)}
       </div>
     </div>
   );
