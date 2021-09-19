@@ -4,7 +4,24 @@ import { UserContext } from '../../../App';
 import jwt_decode from "jwt-decode";
 
 const PrivateRoute = ({ children, ...rest }) => {
+
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+        const tokenTime = () =>{
+        const storedToken = localStorage.getItem("token");
+        if (storedToken){
+        let decodedData = jwt_decode(storedToken, { header: true });
+        let expirationDate = decodedData.exp;
+            var current_time = Date.now() / 1000;
+            if(expirationDate < current_time)
+            {
+               if( localStorage.removeItem("token")){
+                  localStorage.removeItem("token");
+                 }
+                sessionStorage.removeItem("token");
+            }
+        }
+    }
+    tokenTime();
 
     const isLoggedIn = () => {
        const token= sessionStorage.getItem('token');

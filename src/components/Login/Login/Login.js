@@ -24,20 +24,7 @@ const app = initializeApp(firebaseConfig);
 
 const Login = () => {
 
-    const tokenTime = () =>{
-        const storedToken = localStorage.getItem("token");
-        if (storedToken){
-        let decodedData = jwt_decode(storedToken, { header: true });
-        let expirationDate = decodedData.exp;
-            var current_time = Date.now() / 1000;
-            if(expirationDate < current_time)
-            {
-                localStorage.removeItem("token");
-                sessionStorage.removeItem("token");
-            }
-        }
-    }
-    tokenTime();
+
          const auth = getAuth();
          let history = useHistory()
          let location = useLocation();
@@ -53,7 +40,7 @@ const Login = () => {
        if(newUser){
              createUserWithEmailAndPassword(auth, data.email, data.password)
             .then((res) => {
-                tokenTime();
+                // tokenTime();
                 const token = res.user.accessToken;
                 sessionStorage.setItem('token', token)
                 setLoggedInUser(data)
@@ -66,7 +53,7 @@ const Login = () => {
             });
        }
        if(!newUser){
-           tokenTime();
+        //    tokenTime();
           signInWithEmailAndPassword(auth, data.email, data.password)
         .then((userCredential) => {
             const token = userCredential.user.accessToken;
@@ -90,7 +77,7 @@ const Login = () => {
      const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
         .then((result) => {
-            tokenTime();
+            // tokenTime();
             // This gives you a Google Access Token. You can use it to access the Google API.
             const credential = GoogleAuthProvider.credentialFromResult(result);
           
