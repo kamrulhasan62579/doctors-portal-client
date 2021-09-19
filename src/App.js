@@ -17,6 +17,8 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/Notfound/NotFound';
 import Contact from './components/Home/Contact/Contact';
 import Services from './components/Home/Services/Services';
+import Navbar from './components/Shared/Navbar/Navbar';
+import Footer from './components/Shared/Footer/Footer';
 export const UserContext = createContext();
 
 function App() {
@@ -41,10 +43,16 @@ function App() {
                <AllPatients></AllPatients>
             </Route>
             <Route path="/contact">
+               <Navbar></Navbar>
                <Contact></Contact>
+               <Footer></Footer>
             </Route>
             <Route path="/dentalServices">
+              <div className="pb-5">
+                  <Navbar></Navbar>
+              </div>
                <Services></Services>
+               <Footer></Footer>
             </Route>
             <Route path="/home">
                <Home></Home>
