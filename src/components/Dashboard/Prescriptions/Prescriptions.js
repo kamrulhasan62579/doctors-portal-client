@@ -21,7 +21,7 @@ const Prescriptions = () => {
         <Spinner size={120} spinnerColor={"#333"} spinnerWidth={2} visible={true} />
       </div>
       :
-       <div className="col-md-9">
+       <div className="col-md-9 pb-5">
         <h5 className="mt-5">Prescriptions</h5>
         <PrescriptionData prescriptions={prescriptions} />
       </div>

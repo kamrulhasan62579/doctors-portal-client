@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import Calendar from "react-calendar";
+import { useHistory } from "react-router-dom";
 import Spinner from "react-spinner-material";
 import { UserContext } from "../../../App";
 import AppointmentByDate from "../ApponitmentByDate/AppointmentByDate";
 import SideBar from "../SideBar/SideBar";
+import "./Appointment.css"
 
 const Appointments = () => {
   const [byDate, setByDate] = useState([]);
+  console.log(byDate);
   const [value, setValue] = useState(null);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   console.log(value);
@@ -27,7 +30,10 @@ const Appointments = () => {
     },
     [value]
   );
-
+  const history = useHistory();
+  const handleClick = () => {
+      history.push('/makeAppointment')
+  }
   return (
     <div>
       <div className="row w-100 m-0">
@@ -39,9 +45,17 @@ const Appointments = () => {
               <h3 className="p-3 mt-3">Appointments</h3>
               <div className="d-flex justify-content-center">
                 <Calendar onChange={changeDate} value={value} />
+              </div> <br/>
+            <div className="d-flex justify-content-center "> 
+                <div>
+                   <p>For New appointment you can visit this link below</p> 
+                    <button onClick={handleClick} className="btn btn-success special-btn">
+                     GET APPOINTMENT
+                   </button>
+                </div>
               </div>
             </div>
-            <div className="mt-5 col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div className="mt-5 pb-5 col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
               {value ? (
                 <h4 style={{ color: "Green" }}>
                   Appointments of {new Date(value).toDateString()}
@@ -55,7 +69,7 @@ const Appointments = () => {
                     <h4>No Appointment Available</h4>
                   </div>
                   :
-                   <div>
+                   <div className="">
                     <AppointmentByDate appointments={byDate}/>
                   </div>
               }

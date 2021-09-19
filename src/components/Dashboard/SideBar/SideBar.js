@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./SideBar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog, faPrescription, faHospitalUser, faColumns, faCalendarCheck} from '@fortawesome/free-solid-svg-icons'
+import { faCog, faPrescription, faFilePdf, faSignOutAlt, faPlusCircle, faHospitalUser, faColumns, faCalendarCheck} from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from "../../../App";
 import jwt_decode from "jwt-decode";
+import { getAuth, signOut } from "firebase/auth";
 
 
 const SideBar = () => {
@@ -21,10 +22,20 @@ const SideBar = () => {
 
   }, [])
 
+  const auth = getAuth();
+  const handleClick = () => {
+      signOut(auth).then(() => {
+        localStorage.clear();
+        sessionStorage.clear();
+      }).catch((error) => {
+        console.log(error)
+      });
+  }
+
   return (
     <div className="sidebar w-100 m-0">
 
-      <ul className="pt-5" id="links">
+      <ul className="pt-4 pb-5" id="links">
        {
          isDoctor? 
          <div>
@@ -45,7 +56,7 @@ const SideBar = () => {
         </li>
          <li>
           <div className="sidebar-li">
-              <FontAwesomeIcon icon={faPrescription}/><Link className="sidebar-link" to="/addDoctor">Add Doctor</Link>
+              <FontAwesomeIcon icon={faPlusCircle}/><Link className="sidebar-link" to="/addDoctor">Add Doctor</Link>
           </div>
         </li>
         <li>
@@ -55,7 +66,7 @@ const SideBar = () => {
         </li>
         <li>
          <div className="sidebar-li">
-              <FontAwesomeIcon icon={faCog}/><Link className="sidebar-link" to="#">Review</Link>
+              <FontAwesomeIcon icon={faFilePdf}/><Link className="sidebar-link" to="#">Review</Link>
          </div>
         </li>
          </div>
@@ -68,12 +79,17 @@ const SideBar = () => {
         </li>
         <li>
          <div className="sidebar-li">
-              <FontAwesomeIcon icon={faCog}/><Link className="sidebar-link" to="#">Review</Link>
+              <FontAwesomeIcon icon={faFilePdf}/><Link className="sidebar-link" to="#">Review</Link>
          </div>
         </li>
         </div>
 
        }
+        <li>
+          <div className="sidebar-li">
+                <FontAwesomeIcon icon={faSignOutAlt}/> <a className="sidebar-link" onClick={handleClick} href="/">Log Out</a>
+          </div>
+        </li>
       </ul>
     </div>
   );

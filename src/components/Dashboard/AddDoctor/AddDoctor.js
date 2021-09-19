@@ -41,7 +41,7 @@ export default function AddDoctor() {
       <div className="col-md-3">
         <SideBar />
       </div>
-      <div className="col-md-9 mt-5">
+      <div className="col-md-9 mt-5 pb-5">
           <h5>Add Doctors details</h5>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input className="form-control" type="file" onChange={handleClick} />

@@ -41,7 +41,7 @@ const Dashboard = () => {
         <br />
         <br />
 
-        <div>
+        <div className="pb-5">
           <h5>Recent Appointments</h5>
           {
             appointments.length === 0 ?
