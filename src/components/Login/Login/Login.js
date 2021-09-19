@@ -77,12 +77,18 @@ const Login = () => {
      const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
         .then((result) => {
-            // tokenTime();
-            // This gives you a Google Access Token. You can use it to access the Google API.
             const credential = GoogleAuthProvider.credentialFromResult(result);
-          
             const token = credential.accessToken;
-            sessionStorage.setItem('token', token)
+            console.log(token);
+
+            // if(sessionStorage.getItem("token")){
+            //      sessionStorage.clear();
+            //      sessionStorage.setItem('token', token)
+            // }
+            // else{
+            //     sessionStorage.setItem('token', token)
+            // }
+
             const user = result.user;
             const newData = {...loggedInUser};
             newData.displayName = user.displayName;
