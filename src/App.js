@@ -15,6 +15,8 @@ import AllPatients from './components/Dashboard/AllPatients/AllPatients';
 import AddDoctor from './components/Dashboard/AddDoctor/AddDoctor';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/Notfound/NotFound';
+import Contact from './components/Home/Contact/Contact';
+import Services from './components/Home/Services/Services';
 export const UserContext = createContext();
 
 function App() {
@@ -37,6 +39,15 @@ function App() {
             </Route>
              <Route path="/allPatients">
                <AllPatients></AllPatients>
+            </Route>
+            <Route path="/contact">
+               <Contact></Contact>
+            </Route>
+            <Route path="/dentalServices">
+               <Services></Services>
+            </Route>
+            <Route path="/home">
+               <Home></Home>
             </Route>
              <Route path="/prescriptions">
                <Prescriptions></Prescriptions>

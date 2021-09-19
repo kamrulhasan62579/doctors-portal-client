@@ -56,7 +56,7 @@ const Footer = () => {
        
         </div>
         <div style={{backgroundColor: "#2B3346"}}>
-            <p style={{color: "violet", textAlign:"center"}}>All Rights Reserved by Kamrul Hasan || 2021</p>
+            <p style={{color: "violet", textAlign:"center"}}>All Rights Reserved by M K Hasan || 2021</p>
         </div>       
     </div>
     );
