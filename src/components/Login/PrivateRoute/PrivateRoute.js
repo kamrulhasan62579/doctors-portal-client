@@ -14,7 +14,7 @@ const PrivateRoute = ({ children, ...rest }) => {
             var current_time = Date.now() / 1000;
             if(expirationDate < current_time)
             {
-               if( localStorage.removeItem("token")){
+               if(storedToken){
                   localStorage.removeItem("token");
                  }
                 sessionStorage.removeItem("token");
