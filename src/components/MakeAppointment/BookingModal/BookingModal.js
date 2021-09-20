@@ -40,7 +40,7 @@ const BookingModal = ({ modalIsOpen, dateState, cardData, closeModal }) => {
   };
 
   return (
-    <div>
+    <div className="col-10 col-sm-9 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
       {dateState ? (
         <Modal
           isOpen={modalIsOpen}

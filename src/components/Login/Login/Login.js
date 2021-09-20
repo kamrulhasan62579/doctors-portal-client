@@ -115,7 +115,8 @@ const Login = () => {
      }
 
     return (
-        <div style={{height: "100vh"}} className="  d-flex justify-content-center align-items-center">
+        <div>
+            <div  style={{height: "70vh"}}   className="  d-flex justify-content-center align-items-center">
             <div style={{boxShadow: " rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"}} className="ps-5 pe-5  col-10 col-sm-9 col-md-6 col-lg-6 col-xl-4 col-xxl-4 p-3 mb-5 bg-light rounded">
             {
                 newUser ? <form onSubmit={handleSubmit(onSubmit)}>
@@ -167,16 +168,19 @@ const Login = () => {
             newUser ? <p >Already have an account? <span style={{color: 'blue'}} onClick={() => setNewUser(!newUser)}>Log In</span></p> : 
             <p>Are you a new user? <span style={{color: 'blue'}} onClick={() => setNewUser(!newUser)}>Sign Up</span></p>
             }
-            <div className="d-flex justify-content-center">
-               <GoogleButton onClick={handleGoogleSignIn}/>
-            </div> 
+
         </div>
-               {
+                 
+        </div>
+              {
                    err.errorMessage && <div>
                        <h5 style={{color: "red", textAlign: "center"}}>{err.errorCode}</h5>
                        <p style={{color: "red", textAlign: "center"}}>{err.errorMessage}</p>
                    </div>
-               }     
+               }  
+             <div className="d-flex justify-content-center">
+               <GoogleButton onClick={handleGoogleSignIn}/>
+            </div> 
         </div>
     );
 };
