@@ -9,3 +9,10 @@
       width: 100%;
     }
  }
+
+ .bg-color{
+   background: -webkit-linear-gradient(#6bcdfe, #f389ffdd);
+ }
+ .navbar{
+   z-index: 999;
+ }

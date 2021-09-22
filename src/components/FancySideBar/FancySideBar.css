@@ -1,0 +1,147 @@
+@charset "UTF-8";
+:root {
+  --z24: translateZ(24.5px);
+  --z80: translateZ(80px);
+  --ts: all .5s ease;
+  --x90: rotateX(90deg);
+  --xm90: rotateX(-90deg);
+  --y90: rotateY(90deg);
+  --ym90: rotateY(-90deg);
+}
+
+.nav {
+  width: 100%;
+  padding: 16px 16px 0 16px;
+  position: relative;
+  margin: auto;
+}
+
+ol {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-menu {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.li {
+  width: 160px;
+  position: relative;
+  cursor: pointer;
+}
+.li span {
+  width: 100%;
+  height: 49px;
+  display: block;
+  position: relative;
+  transition: var(--ts);
+  transform-style: preserve-3d;
+}
+.li span::before, .li span::after {
+  width: 100%;
+  padding: 16px 0;
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  font: 400 14px "Consolas";
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-item:nth-of-type(2),
+.main-item:nth-of-type(4) {
+  margin: 0 2px;
+}
+
+.main-item:nth-of-type(3)::before,
+.main-item:nth-of-type(4)::before {
+  width: 100%;
+  top: 25px;
+  display: block;
+  position: absolute;
+  color: #fff;
+  font: 400 24px "Consolas";
+  text-align: center;
+  transition: var(--ts);
+  z-index: 100;
+  -webkit-transition: var(--ts);
+  -moz-transition: var(--ts);
+  -ms-transition: var(--ts);
+  -o-transition: var(--ts);
+}
+
+.main-item:hover > span {
+  transform: var(--x90);
+}
+.main-item > span::before {
+  background: #000;
+  color: #fff;
+  transform: var(--z24);
+  box-shadow: 0 8px 6px -6px #888;
+}
+.main-item > span::after {
+  background: #ff9900;
+  transform: var(--xm90) var(--z24);
+}
+
+.dashboard::before, .dashboard::after {
+  content: "Dashboard";
+}
+.appointments::before, .appointments::after {
+  content: "Appointments";
+}
+
+.review::before, .review::after {
+  content: "Review";
+}
+.contact::before, .contact::after {
+  content: "Log Out";
+}
+@-webkit-keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.allPatients::before, .allPatients::after {
+  content: "Patients";
+}
+
+.appointments::before, .appointments::after {
+  content: "appointments";
+}
+
+.addDoctor::before, .addDoctor::after {
+  content: "addDoctor";
+}
+
+.prescriptions::before, .prescriptions::after {
+  content: "prescriptions";
+}
+
+@media screen and (min-width: 321px) and (max-width: 839px) {
+  .nav {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 839px) {
+  .main-item:nth-of-type(2),
+.main-item:nth-of-type(4) {
+    margin: 3px 0;
+  }
+}

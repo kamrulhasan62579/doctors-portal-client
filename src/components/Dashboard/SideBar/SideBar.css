@@ -18,9 +18,9 @@
 .sidebar-li .sidebar-link:hover{
     color: red;
 }
-@media (min-width: 500px) and (max-width: 768.55px) { 
+@media (min-width: 200px) and (max-width: 768.55px) { 
      .sidebar{
-       height: 50.99vh;
+       height: 75.99vh;
      }
  }
  @media (min-width: 768.56px) { 
@@ -29,20 +29,4 @@
      }
  }
  
- /* link name spacing */
 
-  @media (min-width: 500px) and (max-width: 7690.04px) {
-      .sidebar-li .sidebar-link{
-        padding-left: 14px;
-     }
- }
- @media (min-width: 769.05px) and (max-width: 992px) {
-      .sidebar-li .sidebar-link{
-        padding-left: 4px;
-     }
- } 
- @media (min-width: 992px) {
-      .sidebar-li .sidebar-link{
-        padding-left: 14px;
-     }
- } 

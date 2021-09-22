@@ -36,13 +36,13 @@ const Appointments = () => {
   }
   return (
     <div>
-      <div className="row w-100 m-0">
-        <div className="col-12 col-sm-12 col-md-3 col-xl-3 col-lg-3 col-xxl-3">
+      <div className="row w-100 m-0 p-0">
+        <div className="app-sidebar col-12 col-sm-12 col-md-4 col-xl-3 col-lg-3 col-xxl-3">
           <SideBar />
         </div>
-         <div className="col-12 col-sm-12 col-md-9 col-xl-9 col-lg-9 col-xxl-9 row  m-0">
+         <div className="col-12 col-sm-12 col-md-8 col-xl-9 col-lg-9 col-xxl-9 row  m-0">
              <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-              <h3 className="p-3 mt-3">Appointments</h3>
+              <h3 className="p-3 mt-3 text-center">Appointments</h3>
               <div className="d-flex justify-content-center">
                 <Calendar onChange={changeDate} value={value} />
               </div> <br/>

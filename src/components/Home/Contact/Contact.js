@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import Fancysubmit from "../../FancySubmit/Fancysubmit";
 import './Contact.css'
 
 export default function Contact() {
@@ -25,7 +26,7 @@ export default function Contact() {
         <textarea className="form-control" {...register("description", { required: true })} placeholder="Description"></textarea>
          {errors.description && <span>This field is required</span>}
         <br/><br/>
-        <input className="btn btn-success" type="submit" />
+       <Fancysubmit type="submit"></Fancysubmit>
       </form>
       </div>
     </div>
