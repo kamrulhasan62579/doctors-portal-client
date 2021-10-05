@@ -1,35 +1,39 @@
 import React, { useContext, useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import { useHistory } from "react-router-dom";
-import Spinner from "react-spinner-material";
 import { UserContext } from "../../../App";
 import AppointmentByDate from "../ApponitmentByDate/AppointmentByDate";
 import SideBar from "../SideBar/SideBar";
 import "./Appointment.css"
+import jwt_decode from "jwt-decode";
+
 
 const Appointments = () => {
   const [byDate, setByDate] = useState([]);
-  console.log(byDate);
   const [value, setValue] = useState(null);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-  console.log(value);
   const changeDate = e => {
     setValue(e);
   };
-  useEffect(
-    () => {
-      fetch("https://pacific-savannah-02402.herokuapp.com/appointmentByDate", {
+  useEffect(() => {
+    const token = sessionStorage.getItem('token');
+    if (token) {
+        const decodedToken = jwt_decode(token);
+        const userEmail = decodedToken.email;
+
+        fetch("https://pacific-savannah-02402.herokuapp.com/appointmentByDate", {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify({ date: value, email:  loggedInUser.email}),
+        body: JSON.stringify({ date: value, email:  userEmail}),
       })
         .then(res => res.json())
         .then(appointments => setByDate(appointments));
-    },
-    [value]
-  );
+    }
+
+  }, [value]);
+
   const history = useHistory();
   const handleClick = () => {
       history.push('/makeAppointment')

@@ -21,7 +21,7 @@ export default function AddDoctor() {
     const onSubmit = data => {
     // console.log(data);
     const newData = {...data, image: img}
-    fetch("http://localhost:3010/doctors", {
+    fetch("https://pacific-savannah-02402.herokuapp.com/doctors", {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
