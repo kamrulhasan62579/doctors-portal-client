@@ -23,7 +23,7 @@ const serviceData = [
 
 const Services = () => {
     return (
-        <div className="text-center"> <h4 style={{color: "#20c8c2"}}>OUR SERVICES</h4>
+        <div className="text-center pt-5"> <h4 style={{color: "#20c8c2"}}>OUR SERVICES</h4>
         <h1>SERVICES WE PROVIDE</h1>
         
          {/* <div className="spacing">

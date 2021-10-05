@@ -11,7 +11,7 @@ export default function Contact() {
 
 
   return (
-    <div style={{textAlign: "center"}} className="back w-100">
+    <div style={{textAlign: "center"}} className="back w-100 pt-5">
        <div className="col-md-8 offset-md-2 col-12 col-xxl-8 p-5">
         <h5 style={{color: "#17D2BB"}}>CONTACT US</h5>
         <h1 style={{color: "white"}}>Always Contact With Us</h1> <br/><br/>
@@ -23,10 +23,10 @@ export default function Contact() {
         {errors.subject && <span>This field is required</span>}
         <br/><br/>
         {/* <input  /> */}
-        <textarea className="form-control" {...register("description", { required: true })} placeholder="Description"></textarea>
+        <textarea name="" id="" cols="50%" rows="8" className="form-control" {...register("description", { required: true })} placeholder="Description"></textarea>
          {errors.description && <span>This field is required</span>}
         <br/><br/>
-       <Fancysubmit type="submit"></Fancysubmit>
+       <Fancysubmit ></Fancysubmit>
       </form>
       </div>
     </div>

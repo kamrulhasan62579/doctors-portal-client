@@ -3,6 +3,16 @@
 }
 @media only screen and (max-width: 1400px) {
  .media-spaceing {
-   height:440px;
+   height:120px;
+  }
+}
+@media only screen and (max-width: 992px) {
+ .media-spaceing {
+   height:130px;
+  }
+}
+@media only screen and (max-width: 768px) {
+ .media-spaceing {
+   height:200px;
   }
 }
