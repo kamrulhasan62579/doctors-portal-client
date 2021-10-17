@@ -1,11 +1,13 @@
 import React from 'react';
 import "./FancySubmit.css"
 
-const Fancysubmit = () => {
+const Fancysubmit = (props) => {
     return (
          <div className="buttonSubmit">
             <div class="wrap">
-            <button type="submit" class="button-main">Submit</button>
+            {
+                props.children
+            }
             </div>
         </div>
     );

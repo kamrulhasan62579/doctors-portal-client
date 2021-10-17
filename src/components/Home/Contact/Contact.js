@@ -26,7 +26,7 @@ export default function Contact() {
         <textarea name="" id="" cols="50%" rows="8" className="form-control" {...register("description", { required: true })} placeholder="Description"></textarea>
          {errors.description && <span>This field is required</span>}
         <br/><br/>
-       <Fancysubmit ></Fancysubmit>
+       <Fancysubmit ><button type="submit" class="button-main">Submit</button></Fancysubmit>
       </form>
       </div>
     </div>

@@ -44,15 +44,13 @@ const Testimonal = () => {
           style={{ color: "#D6F6F6", fontSize: "250px" }}
           className="offset-md-3"
         >
-          <FontAwesomeIcon icon={faQuoteLeft} />
+          <FontAwesomeIcon icon={faQuoteLeft}/>
         </div>
       </div>
       <div className="row w-100 d-flex justify-content-center">
-        
-        {testimonalData.map(pd => <TestimonalData key={pd.id} data={pd} />)}
+        {testimonalData.map(pd => <TestimonalData key={pd.id} data={pd}/>)}
       </div>
     </div>
   );
 };
-
 export default Testimonal;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import chair from '../../../images/chair.png'
+import Fancysubmit from '../../FancySubmit/Fancysubmit';
 import './HeaderMain.css'
 
 const HeaderMain = () => {
@@ -14,7 +15,7 @@ const HeaderMain = () => {
             <div className="col-md-6 col-12  ">
                  <h1 className="headerMainH1" style={{color: "rgb(58,66,66)"}}>Your New Smile <br/> Starts Here</h1>
                  <p style={{textAlign: "justify", color: "violet"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint adipisci illo nihil, laboriosam hic praesentium aut corporis nulla, distinctio facere animi optio minus libero excepturi, iusto impedit non velit quas!</p>
-                 <button onClick={handlePush} className="btn btn-success">GET APPOINTMENT</button>
+                 <Fancysubmit><button onClick={handlePush} type="submit" class="button-main">GET APPOINTMENT</button></Fancysubmit>
             </div>
             <div className="col-md-6 col-12">
                 <img src={chair} alt="" className="img-fluid"/>

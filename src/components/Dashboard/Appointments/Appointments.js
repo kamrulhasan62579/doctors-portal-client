@@ -6,6 +6,7 @@ import AppointmentByDate from "../ApponitmentByDate/AppointmentByDate";
 import SideBar from "../SideBar/SideBar";
 import "./Appointment.css"
 import jwt_decode from "jwt-decode";
+import Fancysubmit from "../../FancySubmit/Fancysubmit";
 
 
 const Appointments = () => {
@@ -53,9 +54,7 @@ const Appointments = () => {
             <div className="d-flex justify-content-center "> 
                 <div>
                    <p>For New appointment you can visit this link below</p> 
-                    <button onClick={handleClick} className="btn btn-success special-btn">
-                     GET APPOINTMENT
-                   </button>
+                   <Fancysubmit ><button onClick={handleClick} type="submit" class="button-main">Get Appointment</button></Fancysubmit>
                 </div>
               </div>
             </div>

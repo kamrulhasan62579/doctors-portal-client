@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Testimonal/Testimonal.css'
+import './TestimonalData.css'
 
 const TestimonalData = ({data}) => {
     return (
-        <div className="shadow m-3 p-3 bg-light testimonal col-9 col-sm-7 col-lg-3 col-xl-3 col-xxl-3 col-md-3 rounded">
+        <div className="shadow m-3 p-3 testimonal col-9 col-sm-7 col-lg-3 col-xl-3 col-xxl-3 col-md-3 rounded">
             <div className="pb-5 pt-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur velit neque nam, quisquam itaque!
             </div>

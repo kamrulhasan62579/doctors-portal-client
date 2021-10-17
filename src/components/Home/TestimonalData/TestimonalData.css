@@ -1,0 +1,8 @@
+.testimonal:hover{
+    background-color: crimson;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in;
+}
