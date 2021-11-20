@@ -1,0 +1,64 @@
+[debug] [2021-10-17T08:51:55.133Z] ----------------------------------------------------------------------
+[debug] [2021-10-17T08:51:55.149Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M.M.C\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2021-10-17T08:51:55.149Z] CLI Version:   9.20.0
+[debug] [2021-10-17T08:51:55.149Z] Platform:      win32
+[debug] [2021-10-17T08:51:55.149Z] Node Version:  v13.14.0
+[debug] [2021-10-17T08:51:55.149Z] Time:          Sun Oct 17 2021 14:51:55 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-17T08:51:55.149Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=758261820&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-17T08:52:42.859Z] ----------------------------------------------------------------------
+[debug] [2021-10-17T08:52:42.859Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M.M.C\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2021-10-17T08:52:42.874Z] CLI Version:   9.20.0
+[debug] [2021-10-17T08:52:42.874Z] Platform:      win32
+[debug] [2021-10-17T08:52:42.874Z] Node Version:  v13.14.0
+[debug] [2021-10-17T08:52:42.874Z] Time:          Sun Oct 17 2021 14:52:42 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-17T08:52:42.874Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=688225974&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-17T08:53:11.733Z] ----------------------------------------------------------------------
+[debug] [2021-10-17T08:53:11.740Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M.M.C\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2021-10-17T08:53:11.741Z] CLI Version:   9.20.0
+[debug] [2021-10-17T08:53:11.741Z] Platform:      win32
+[debug] [2021-10-17T08:53:11.741Z] Node Version:  v13.14.0
+[debug] [2021-10-17T08:53:11.743Z] Time:          Sun Oct 17 2021 14:53:11 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-17T08:53:11.743Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=372574503&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-17T08:54:47.692Z] ----------------------------------------------------------------------
+[debug] [2021-10-17T08:54:47.692Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M.M.C\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2021-10-17T08:54:47.692Z] CLI Version:   9.20.0
+[debug] [2021-10-17T08:54:47.692Z] Platform:      win32
+[debug] [2021-10-17T08:54:47.707Z] Node Version:  v13.14.0
+[debug] [2021-10-17T08:54:47.707Z] Time:          Sun Oct 17 2021 14:54:47 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-17T08:54:47.707Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=838137577&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
